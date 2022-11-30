@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-4">
+          <h1>On Way Data Binding</h1>
+          <h3>from .ts to html templets</h3>
+          <ul>
+            <li>Interpolation</li>
+            <li>Event Binding</li>
+          </ul>
+  </div>
+  <div class="col-4">
+          <h1>On Way Data Binding</h1>
+          <h3>from html to .ts</h3>
+          <ul>
+            <li>property Binding</li>
+          </ul>
+  </div>
+  <div class="col-4">
+          <h1>Two Way Data Binding</h1>
+          <ul>
+            <li>using ngmodel</li>
+          </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4">
+    <div>
+    <p [class]="pColour" >flName : {{firstName}} {{lastName}} </p>
+    </div>
+    <div>
+      <input type="text" [placeholder]="placeHolder" [value]="lastName" name="" id="txtid" class="form-control">
+    </div>
+    <input [placeholder]="placeHolder" value="" name="" id="txtid" [type]="inputType">
+  </div>
+
+  <div class="col-4">
+    <div class="row">
+      <div class="col-4">
+           <button class="btn btn-sm btn-danger" (click)="onDecrement()" >Decrement</button>
+      </div>
+      <div class="col-4 text-center">
+              {{number}}
+      </div>
+      <div class="col-4">
+          <button class="btn btn-sm btn-primary" (click)="onIncrement()" >Increment</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <label for="">Select city</label>
+        <select class="form-control" (change)="onCityChange($event)">
+          <option value="nagpur">Nagpur</option>
+          <option value="pune">pune</option>
+          <option value="Beed">Beed</option>
+          <option value="ambajogai">ambajogai</option>
+          <option value="Ausa">Ausa</option>
+          <option value="Nanded">Nanded</option>
+        </select>
+      </div>
+      <div class="col-4">
+        selected city :
+      </div>
+    </div>
+  </div>
+</div>
